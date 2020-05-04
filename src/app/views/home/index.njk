@@ -1,0 +1,19 @@
+{% import 'parts/recipes-list.njk' as recipes %}
+{% extends 'layout.njk' %}
+{% block content %}
+<main class="container">
+  <section class="banner">
+    <div class="description">
+      <h1>As melhores receitas</h1>
+      <p>Aprenda a construir os melhores pratos com receitas
+        criadas por profissionais do mundo inteiro.
+      </p>
+    </div>
+    <div class="chef">
+      <img src="/images/chef.png" alt="Chef de Cozinha">
+    </div>
+  </section>
+
+  {{ recipes.list('Mais acessadas') }}
+</main>
+{% endblock %}

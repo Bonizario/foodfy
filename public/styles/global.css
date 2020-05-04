@@ -6,6 +6,7 @@
   list-style: none;
   text-decoration: none;
   box-sizing: border-box;
+  color: #111;
 }
 
 html, body {
@@ -22,12 +23,6 @@ body {
 
 footer {
   margin-top: auto;
-}
-
-input, button, textarea, select {
-  font: 400 18px 'Roboto', sans-serif;
-  width: 100%;
-  border-radius: 2px;
 }
 
 button {

@@ -1,0 +1,8 @@
+{% import 'parts/recipes-list.njk' as recipes %}
+{% extends 'layout.njk' %}
+{% block content %}
+<main class="container">
+{{ recipes.list() }}
+{{ recipes.list() }}
+</main>
+{% endblock %}
