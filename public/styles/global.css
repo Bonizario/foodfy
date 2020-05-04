@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: none;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100vh;
+}
+
+body {
+  font: 400 16px 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
+}
+
+input, button, textarea, select {
+  font: 400 18px 'Roboto', sans-serif;
+  width: 100%;
+  border-radius: 2px;
+}
+
+button {
+  cursor: pointer;
+}
+
+input[type=file], /* FF, IE7+, chrome (except button) */
+input[type=file]::-webkit-file-upload-button { /* chromes and blink button */
+  cursor: pointer;
+}
+
+.container {
+  width: 90%;
+  max-width: 940px;
+  margin: 0 auto;
+}
