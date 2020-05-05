@@ -1,20 +1,14 @@
 const express = require('express');
 const routes = express.Router();
+const HomeController = require('./app/controllers/HomeController');
 const RecipeController = require('./app/controllers/RecipeController');
 
 /* === HOME === */
-routes.get('/', (req, res) => {
-  return res.render('home/index');
-});
-
-/* === ABOUT === */
-routes.get('/sobre', (req, res) => {
-  return res.render('home/sobre');
-});
+routes.get('/', HomeController.index);
+routes.get('/sobre', HomeController.about);
 
 /* === RECEIPES === */
 routes.get('/receitas', RecipeController.index);
-
 routes.get('/receitas/:id', RecipeController.show);
 
 /* === ALIAS === */

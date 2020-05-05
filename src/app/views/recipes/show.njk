@@ -12,9 +12,14 @@
     <div class="recipe-section">
       <div class="section-title">
         <h3>Ingredientes</h3>
-        <i>Esconder</i>
+        <i
+          class="toggle-info-button"
+          onclick="ToggleInfo(this, 'ingredients')"
+        >
+          Esconder
+        </i>
       </div>
-      <div class="section-content">
+      <div id="ingredients" class="section-content">
         <ul>
         {% for ingredient in recipe.ingredients %}
           <li>{{ ingredient }}</li>
@@ -26,9 +31,14 @@
     <div class="recipe-section">
       <div class="section-title">
         <h3>Modo de preparo</h3>
-        <i>Esconder</i>
+        <i
+          class="toggle-info-button"
+          onclick="ToggleInfo(this, 'preparation')"
+        >
+          Esconder
+        </i>
       </div>
-      <div class="section-content">
+      <div id="preparation" class="section-content">
         <ul>
         {% for step in recipe.preparation %}
           <li>{{ step }}</li>
@@ -40,13 +50,15 @@
     <div class="recipe-section">
       <div class="section-title">
         <h3>Informações adicionais</h3>
-        <i>Esconder</i>
+        <i
+          class="toggle-info-button"
+          onclick="ToggleInfo(this, 'information')"
+        >
+          Esconder
+        </i>
       </div>
-      <div class="section-content">
-      {% for info in recipe.information.split('\n\n') %}
-        <p>{{ info }}</p>
-        <br>
-      {% endfor %}
+      <div id="information" class="section-content">
+        <p>{{ recipe.information.replace('\n', '<br>') }}</p>
       </div>
     </div>
 

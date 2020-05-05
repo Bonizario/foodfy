@@ -1,14 +1,16 @@
-const data = require('../../data');
+const Recipe = require('../models/Recipe');
 
 module.exports = {
-  index(req,res) {
+  index(req, res) {
+    const recipes = Recipe.all();
 
-    return res.render('recipes/index');
+    return res.render('recipes/index', { recipes });
   },
   show(req, res) {
-    const recipeId = req.params.id;
-    const foundRecipe = data.find(recipe => recipe.id === recipeId);
+    const recipe = Recipe.find(req.params.id);
 
-    return res.render('recipes/show', { recipe: foundRecipe });
+    if (!recipe) return res.render('Receita não encontrada');
+
+    return res.render('recipes/show', { recipe });
   },
 };

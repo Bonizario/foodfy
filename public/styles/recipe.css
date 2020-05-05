@@ -1,0 +1,76 @@
+
+/* === RECIPES-SHOW === */
+.show-recipe {
+  margin: 20px 0 50px;
+}
+
+.show-recipe img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.show-recipe .recipe-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.show-recipe .recipe-title h1 {
+  font-size: 36px;
+  line-height: 42px;
+}
+
+.show-recipe .recipe-title h2 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #777;
+}
+
+.show-recipe .recipe-section {
+  margin-top: 50px;
+}
+
+.show-recipe .section-title {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 20px;
+}
+
+.show-recipe .section-title h3 {
+  font-size: 24px;
+  line-height: 28px;
+  margin-right: 8px;
+}
+
+.show-recipe .section-title i {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14px;
+  font-style: normal;
+  text-transform: uppercase;
+  color: #999;
+  cursor: pointer;
+}
+
+.show-recipe .section-content.show {
+  line-height: 28px;
+  color: #444;
+}
+
+.show-recipe .section-content ul li {
+  list-style: disc inside;
+}
+
+.show-recipe .section-content.show {
+  display: block;
+  opacity: 1;
+}
+
+.show-recipe .section-content.show {
+  display: none;
+  opacity: 0;
+}

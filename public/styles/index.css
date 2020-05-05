@@ -10,7 +10,7 @@
 
 .nav-bar .logo {
   margin-right: 90px;
-  height: 32px;
+  height: 27px;
 }
 
 .nav-bar .logo img {
@@ -63,34 +63,42 @@
 
 /* === RECIPES-INDEX === */
 .recipes {
-  margin: 30px 0px 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px 20px;
 }
 
-.recipes h2 {
+.recipes-section {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.most-accessed-recipes h2 {
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
   margin-bottom: 20px;
 }
 
-.recipes-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px 20px;
+.recipes .recipe .recipe-image {
+  width: 300px;
+  height: 140px;
 }
 
-.recipes-grid .recipe img {
+.recipes .recipe img {
   border-radius: 15px;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.recipes-grid .recipe h3 {
+.recipes .recipe h3 {
   font-weight: 400;
   line-height: 21px;
   margin: 20px 0 5px;
 }
 
-.recipes-grid .recipe p {
+.recipes .recipe p {
   font-size: 14px;
   line-height: 16px;
   color: #777777;
@@ -131,69 +139,4 @@
   line-height: 28px;
   color: #444;
   margin: 20px 0px 30px;
-}
-
-/* === RECIPES-SHOW === */
-.show-recipe {
-  margin: 20px 0 31px; /* <br> extra de 19px */
-}
-
-.show-recipe img {
-  width: 100%;
-  object-fit: cover;
-  border-radius: 15px;
-}
-
-.show-recipe .recipe-title {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50px;
-}
-
-.show-recipe .recipe-title h1 {
-  font-size: 36px;
-  line-height: 42px;
-}
-
-.show-recipe .recipe-title h2 {
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 24px;
-  color: #777;
-}
-
-.show-recipe .recipe-section {
-  margin-top: 50px;
-}
-
-.show-recipe .section-title {
-  display: flex;
-  align-items: baseline;
-  margin-bottom: 20px;
-}
-
-.show-recipe .section-title h3 {
-  font-size: 24px;
-  line-height: 28px;
-  margin-right: 8px;
-}
-
-.show-recipe .section-title i {
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 14px;
-  font-style: normal;
-  text-transform: uppercase;
-  color: #999;
-}
-
-.show-recipe .section-content {
-  line-height: 28px;
-  color: #444;
-}
-
-.show-recipe .section-content ul li {
-  list-style: disc inside;
 }
